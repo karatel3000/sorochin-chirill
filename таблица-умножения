@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style>
+	.table {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    }
+    .inside {
+    margin: 0 4vw 0 4vw;
+    }
+</style>
+<body>
+
+<h3>Таблица умножения.</h3>
+
+<div ng-app="myApp" ng-controller="myCtrl" class="table">
+
+<div ng-repeat="first in numbers" class="inside">
+	<p ng-repeat="second in numbers">{{first + " * " + second + " = " + (first * second)}}</p>
+    <br>
+</div>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+});
+</script>
+
+</body>
+</html>
