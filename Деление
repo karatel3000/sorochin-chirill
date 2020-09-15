@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">			</script>
+  </head>
+  <body ng-app="" ng-init="a=1,b=1">
+
+    Число a: <input type="number" ng-model="a"><br>
+    Число b: <input type="number" ng-model="b">
+
+    <h3 ng-if="b == 0">
+      На ноль делить нельзя!
+    </h3>
+    <h3 ng-else>
+      {{a}} / {{b}} == {{a / b}}
+    </h3>
+  </body>
+</html>
