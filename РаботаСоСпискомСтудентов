@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.angularjs.org/1.5.8/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-controller="myController">
+      <div ng-repeat="student in students | orderBy: 'nota'">
+        <p>{{student.nume + ' ' + student.prenume.substring(0, 1) + '.'}}, оценка: {{student.nota}}</p>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var myApp=angular.module('myApp', []);
+      myApp.controller('myController', function($scope) {
+        $scope.students = 
+        [
+            {"nume": "Сорокин", "prenume": "Кирилл", "nota": 10},
+            {"nume": "Монро", "prenume": "Мэрлин", "nota": 8},
+            {"nume": "Мэнсон", "prenume": "Мэрлин", "nota": 9},
+            {"nume": "Гейтс", "prenume": "Билл", "nota": 10}
+        ]
+      });
+    </script>
+  </body>
+</html>
