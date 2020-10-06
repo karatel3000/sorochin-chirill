@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="">
+<div>
+<p>Фамилия: <input type="text" ng-model="first"></p>
+<p>Имя: <input type="text" ng-model="last"></p>
+<p>Год рождения: <input type="text" ng-model="age"></p>
+
+</div>
+<br>
+<h3>Факультет</h3>
+<form>
+  Выберите факультет:
+  <input type="radio" ng-model="myVar" value="chimie">chimie
+  <input type="radio" ng-model="myVar" value="informatica">informatica
+  <input type="radio" ng-model="myVar" value="matematica">matematica
+</form>
+
+<br>
+<p>Ожидаемая зарплата: <input type="text" ng-model="money"></p>
+
+
+<br>
+<div ng-if="money == 10000">
+<h1>ПРЕУВЕЛИЧИНАЯ</h1>
+</div>
+<div ng-if="money < 3000">
+<h1>Не дооцениваете себя</h1>
+</div>
+<br>
+
+
+</body>
+</html>
